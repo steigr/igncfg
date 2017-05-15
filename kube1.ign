@@ -1,0 +1,40 @@
+{
+	"ignition": {
+		"version": "2.0.0"
+	},
+	"networkd": {
+		"units": [
+			{
+				"contents": "[Match]\nName=eth0\n\n[Link]\nMTUBytes=65535\n\n[Network]\nAddress=172.18.0.250/24\nGateway=172.18.0.1\nDNS=213.133.100.100\nDNS=213.133.99.99\nDNS=213.133.98.98",
+				"name": "eth0.network"
+			}
+		]
+	},
+	"passwd": {
+		"users": [
+			{
+				"name": "core",
+				"sshAuthorizedKeys": [
+					"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII/F3hri1c7ApsuOyaDtDpv7WULQfeTzwp346Vww7YfZ"
+				]
+			}
+		]
+	},
+	"storage": {
+		"disks": [],
+		"files": [
+			{
+				"contents": {
+					"source": "data:,kube1"
+				},
+				"filesystem": "root",
+				"mode": 420,
+				"path": "/etc/hostname"
+			}
+		],
+		"filesystems": []
+	},
+	"systemd": {
+		"units": []
+	}
+}
